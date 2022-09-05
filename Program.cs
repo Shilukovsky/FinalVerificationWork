@@ -16,9 +16,10 @@ int NewSize(string[] array)
 string[] NewArray(string[] array, int size)
 {
     string[] newarray = new string[size];
+    int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        int count = 1;
+        
         if (array[i].Length <= 3) 
         {
             newarray[count] = array[i]; 
@@ -39,9 +40,9 @@ void PrintArray(string[] array)
 }
 PrintArray(array);
 Console.Write(" -> ");
-int newseze = NewSize(array);
-string[] newarr = NewArray(array, newseze);
-if (newseze > 0) 
+int newsize = NewSize(array);
+string[] newarr = NewArray(array, newsize);
+if (newsize > 0) 
 PrintArray(newarr);
 else 
 Console.Write("[]");
